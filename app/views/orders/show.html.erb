@@ -19,7 +19,7 @@
       </thead>
       <tbody>
         <% @order.line_items.each do |item| %>
-          <%= render 'line_item', product: item%>
+          <%= render 'line_item', item: item, product: Product.find(item.product_id) %>
         <% end %>
       </tbody>
       <tfoot>

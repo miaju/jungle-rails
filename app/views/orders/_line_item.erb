@@ -1,23 +1,22 @@
 <tr>
   <td>
-    image
-    <%#= image_tag product.image.tiny.url %>
+
+    <%= image_tag product.image.tiny.url %>
   </td>
   <td>
-    <%pp product%>
-    <h4>title<%#= product.product_id %></h4>
+    <h4><%= product.name %></h4>
     <br>
-    <p> description<%#= product.description %> </p>
+    <p> <%= product.description %> </p>
   </td>
   <td>
-    <%= humanized_money_with_symbol product.item_price_cents / 100.00 %>
+    <%= humanized_money_with_symbol item.item_price_cents / 100.00 %>
   </td>
   <td>
     <div>
-    <%= product.quantity %>
+    <%= item.quantity %>
     </div>
   </td>
   <td>
-    <%= humanized_money_with_symbol product.total_price_cents / 100.00 %>
+    <%= humanized_money_with_symbol item.total_price_cents / 100.00 %>
   </td>
 </tr>
