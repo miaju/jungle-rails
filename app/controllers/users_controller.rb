@@ -12,6 +12,10 @@ class UsersController < ApplicationController
     end
   end
 
+  def find_by_email(email)
+    return User.where(email: email)
+  end
+
   private def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
